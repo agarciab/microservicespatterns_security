@@ -1,24 +1,23 @@
-package com.viewnext.currencyconversionservice;
+package com.viewnext.netflixzuulapigatewayserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
 import brave.sampler.Sampler;
-@EnableHystrix
+
+@EnableZuulProxy
 @EnableDiscoveryClient
-@EnableFeignClients("com.viewnext.currencyconversionservice.proxy")
 @SpringBootApplication
-public class CurrencyConversionServiceApplication {
+public class NetflixZuulApiGatewayServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CurrencyConversionServiceApplication.class, args);
+		SpringApplication.run(NetflixZuulApiGatewayServerApplication.class, args);
 	}
 	
-	@Bean
+    @Bean
     public Sampler defaultSampler(){
    	 return Sampler.ALWAYS_SAMPLE;
     }

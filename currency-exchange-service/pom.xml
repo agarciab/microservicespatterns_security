@@ -75,6 +75,30 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
+		
+		<!-- CLIENT DISCOVERY. NETFLIX EUREKA CLIENT -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		
+		<!-- DISTRIBUTED TRACES. NETFLIX SLEUTH -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		
+		<!-- DISTRIBUTED TRACES. ZIPKIN -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+		</dependency>
+		
+		<!-- COLA. RABBITMQ -->
+		<dependency>
+	   		 <groupId>org.springframework.cloud</groupId>
+	   		 <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+	   	</dependency>
 
 	</dependencies>
 
